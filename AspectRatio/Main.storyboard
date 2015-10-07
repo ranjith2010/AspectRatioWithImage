@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="DJq-fO-mac">
+                                <rect key="frame" x="150" y="244" width="20" height="10"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="2CU-mI-OY9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="dw0-oG-2bE"/>
+                                    <constraint firstAttribute="height" constant="10" id="vzC-l4-fAG"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="1" green="0.60724460420000004" blue="0.47465228459999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2CU-mI-OY9"/>
+                                        <exclude reference="dw0-oG-2bE"/>
+                                    </mask>
+                                </variation>
+                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hb2-wA-amp" customClass="PHPageScrollView">
+                                <rect key="frame" x="0.0" y="50" width="320" height="180"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.68006234217171713" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hb2-wA-amp" secondAttribute="height" multiplier="16:9" id="dgN-pF-GYN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hb2-wA-amp" secondAttribute="trailing" id="4lJ-RX-Bqr"/>
+                            <constraint firstAttribute="trailing" secondItem="DJq-fO-mac" secondAttribute="trailing" constant="150" id="5rs-Na-scu"/>
+                            <constraint firstItem="DJq-fO-mac" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="C25-hp-SHT"/>
+                            <constraint firstItem="hb2-wA-amp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iPj-Bd-TNG"/>
+                            <constraint firstItem="hb2-wA-amp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="mGR-DX-j4A"/>
+                            <constraint firstItem="DJq-fO-mac" firstAttribute="top" secondItem="hb2-wA-amp" secondAttribute="bottom" constant="14" id="nFV-Wj-0NH"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pageControl" destination="DJq-fO-mac" id="RyH-B9-i5F"/>
+                        <outlet property="pageScrollView" destination="hb2-wA-amp" id="yEj-9h-R56"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="349"/>
+        </scene>
+    </scenes>
+</document>
